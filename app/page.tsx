@@ -66,4 +66,3 @@ export default function Home() {
    {musicalAwards.map((award,i)=>renderAward(award,i,"Musical Arts"))}
   </div><footer className="border-t border-white/10 px-6 py-8 text-center text-xs text-slate-400">© 2026 5IVE STUDIOS · CREATIVE & MUSICAL ARTS AWARDS · PREVIEW MODE</footer>
  </main>;
-}
