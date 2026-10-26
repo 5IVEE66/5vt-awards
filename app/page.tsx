@@ -25,9 +25,9 @@ type Category = {
   awards: Award[];
 };
 
-const photo = (name: string) => `/nominees/${name}.webp`;
-const musical = (name: string) => `/musical-arts/${name}`;
-const annual = (name: string) => `/annual-achievement/${name}.webp`;
+const photo = (id: string) => `/nominees/${id}.webp`;
+const musical = (filename: string) => `/musical-arts/${filename}`;
+const annual = (id: string) => `/annual-achievement/${id}.webp`;
 
 const categories: Category[] = [
   {
@@ -126,7 +126,6 @@ const categories: Category[] = [
       },
     ],
   },
-
   {
     id: "musical-arts",
     title: "Musical Arts Awards",
@@ -137,26 +136,11 @@ const categories: Category[] = [
         description:
           "This award honors an artist whose passion, dedication, and undeniable talent continue to inspire the 5VT community. Your journey is proof that greatness comes from believing in yourself and never giving up on your dreams.",
         nominees: [
-          {
-            name: "Zyyannn",
-            image: musical("01-Zyyannn.png"),
-          },
-          {
-            name: "KeyunDh",
-            image: musical("02-KeyunDh.png"),
-          },
-          {
-            name: "Jaelblancoo",
-            image: musical("03-Jaelblancoo.png"),
-          },
-          {
-            name: "TaliBandz",
-            image: musical("04-TaliBandz.png"),
-          },
-          {
-            name: "Plezo",
-            image: musical("05-Plezo.png"),
-          },
+          { name: "Zyyannn", image: musical("01-Zyyannn.png") },
+          { name: "KeyunDh", image: musical("02-KeyunDh.png") },
+          { name: "Jaelblancoo", image: musical("03-Jaelblancoo.png") },
+          { name: "TaliBandz", image: musical("04-TaliBandz.png") },
+          { name: "Plezo", image: musical("05-Plezo.png") },
         ],
       },
       {
@@ -237,7 +221,6 @@ const categories: Category[] = [
       },
     ],
   },
-
   {
     id: "annual-achievement",
     title: "Annual Achievement Awards",
@@ -246,35 +229,23 @@ const categories: Category[] = [
         id: "rookie",
         title: "5VT Rookie of the Year Award",
         description:
-          "This award is awarded to a fairly new supporter. This supporter appeared in the last 6 months and their presence and name holds weight in the community like no other already.",
+          "This award celebrates a fairly new supporter who joined within the last six months and has already made an unforgettable impact. Their presence, energy, and name carry weight throughout the 5VT community.",
         nominees: [
-          {
-            name: "Zyyannn",
-            image: annual("zyyannn"),
-          },
-          {
-            name: "KeenOffCam",
-            image: annual("keenoffcam"),
-          },
+          { name: "Zyyannn", image: annual("zyyannn") },
+          { name: "KeenOffCam", image: annual("keenoffcam") },
           {
             name: "Theonlymiimii_444",
             image: annual("theonlymiimii_444"),
           },
-          {
-            name: "Wraxs",
-            image: annual("wraxs"),
-          },
-          {
-            name: "Bammb00zl3d",
-            image: annual("bammb00zl3d"),
-          },
+          { name: "Wraxs", image: annual("wraxs") },
+          { name: "Bammb00zl3d", image: annual("bammb00zl3d") },
         ],
       },
       {
         id: "peoples-choice",
         title: "5VT People's Choice Award",
         description:
-          "This award is awarded to the individual who has earned the love, respect, and recognition of the 5VT community. Unlike other awards, this winner is chosen entirely by the PEOPLE.",
+          "This award honors the individual who has earned the love, respect, and recognition of the 5VT community. Unlike other awards, this winner is chosen entirely by the PEOPLE.",
         openNomination: true,
         nominees: [],
       },
@@ -282,32 +253,20 @@ const categories: Category[] = [
         id: "valuable-5ive",
         title: "5VT Most Valuable 5ive Award",
         description:
-          "This Award is awarded to the person who best represents 5VT through their loyalty, involvement, personality, and impact on the community.",
+          "This award recognizes the person who best represents 5VT through their loyalty, involvement, personality, and lasting impact on the community.",
         nominees: [
-          {
-            name: "ThatsSoChilly",
-            image: annual("thatsschilly"),
-          },
-          {
-            name: "LiyyLovesYouu",
-            image: annual("liyy-loves-you"),
-          },
+          { name: "ThatsSoChilly", image: annual("thatsschilly") },
+          { name: "LiyyLovesYouu", image: annual("liyy-loves-you") },
           {
             name: "OfficialMayNorth",
             image: annual("officialmaynorth"),
           },
-          {
-            name: "Zyyannn",
-            image: annual("zyyannn"),
-          },
+          { name: "Zyyannn", image: annual("zyyannn") },
           {
             name: "RobWasn'tHere",
             image: annual("rob-wasnt-here"),
           },
-          {
-            name: "KeyunDh",
-            image: annual("keyundh"),
-          },
+          { name: "KeyunDh", image: annual("keyundh") },
         ],
       },
       {
@@ -316,26 +275,14 @@ const categories: Category[] = [
         description:
           "This award celebrates a woman who embodies strength, confidence, and excellence. Through her influence, dedication, and impact, she continues to inspire others, uplift the community, and prove that greatness knows no limits.",
         nominees: [
-          {
-            name: "leaa_eunoia",
-            image: annual("leaa-eunoia"),
-          },
-          {
-            name: "ThatsSoChilly",
-            image: annual("thatsschilly"),
-          },
-          {
-            name: "TaliRenee",
-            image: annual("talirenee"),
-          },
+          { name: "leaa_eunoia", image: annual("leaa-eunoia") },
+          { name: "ThatsSoChilly", image: annual("thatsschilly") },
+          { name: "TaliRenee", image: annual("talirenee") },
           {
             name: "FavoritesFavorite",
             image: annual("favoritesfavorite"),
           },
-          {
-            name: "LiyyLovesYou",
-            image: annual("liyy-loves-you"),
-          },
+          { name: "LiyyLovesYou", image: annual("liyy-loves-you") },
           {
             name: "Theonlymiimii_444",
             image: annual("theonlymiimii_444"),
@@ -346,32 +293,17 @@ const categories: Category[] = [
         id: "chatter",
         title: "5VT Chatter of the Year",
         description:
-          "This award is awarded to the person who consistently makes Twitch chat more entertaining and interactive.",
+          "This award recognizes the person who consistently makes Twitch chat more entertaining, engaging, and interactive.",
         nominees: [
           {
             name: "OfficialMayNorth",
             image: annual("officialmaynorth"),
           },
-          {
-            name: "ThatsSoChilly",
-            image: annual("thatsschilly"),
-          },
-          {
-            name: "LiyyLovesYou",
-            image: annual("liyy-loves-you"),
-          },
-          {
-            name: "TaliRenee",
-            image: annual("talirenee"),
-          },
-          {
-            name: "Zyyann",
-            image: annual("zyyannn"),
-          },
-          {
-            name: "Jahxgeez_",
-            image: annual("jahxgeez"),
-          },
+          { name: "ThatsSoChilly", image: annual("thatsschilly") },
+          { name: "LiyyLovesYou", image: annual("liyy-loves-you") },
+          { name: "TaliRenee", image: annual("talirenee") },
+          { name: "Zyyann", image: annual("zyyannn") },
+          { name: "Jahxgeez_", image: annual("jahxgeez") },
         ],
       },
     ],
@@ -399,22 +331,55 @@ function NomineePhoto({ nominee }: { nominee: Nominee }) {
     </div>
   );
 }
-const [user, setUser] = useState<User | null>(null);
+
+export default function Home() {
+  // Twitch authentication
+  const [user, setUser] = useState<User | null>(null);
+  const [authLoading, setAuthLoading] = useState(true);
+  const [authError, setAuthError] = useState("");
+
+  // Award selections (preview only)
+  const [choices, setChoices] = useState<Record<string, string>>({});
+  const [peopleChoice, setPeopleChoice] = useState("");
 
   useEffect(() => {
-    supabase.auth.getUser().then(({ data }) => {
-      setUser(data.user);
-    });
+    let active = true;
 
-    const { data: listener } =
-      supabase.auth.onAuthStateChange((_event, session) => {
-        setUser(session?.user ?? null);
+    supabase.auth
+      .getUser()
+      .then(({ data, error }) => {
+        if (!active) return;
+        if (error) {
+          setAuthError(error.message);
+        }
+        setUser(data.user);
+      })
+      .catch(() => {
+        if (active) {
+          setAuthError("Unable to check your login status.");
+        }
+      })
+      .finally(() => {
+        if (active) setAuthLoading(false);
       });
 
-    return () => listener.subscription.unsubscribe();
+    const { data: listener } = supabase.auth.onAuthStateChange(
+      (_event, session) => {
+        if (!active) return;
+        setUser(session?.user ?? null);
+        setAuthLoading(false);
+      }
+    );
+
+    return () => {
+      active = false;
+      listener.subscription.unsubscribe();
+    };
   }, []);
 
   async function loginWithTwitch() {
+    setAuthError("");
+
     const { error } = await supabase.auth.signInWithOAuth({
       provider: "twitch",
       options: {
@@ -422,15 +387,29 @@ const [user, setUser] = useState<User | null>(null);
       },
     });
 
-    if (error) alert(error.message);
+    if (error) {
+      setAuthError(error.message);
+    }
   }
 
   async function logout() {
-    await supabase.auth.signOut();
+    setAuthError("");
+
+    const { error } = await supabase.auth.signOut();
+
+    if (error) {
+      setAuthError(error.message);
+    } else {
+      setUser(null);
+    }
   }
-export default function Home() {
-  const [choices, setChoices] = useState<Record<string, string>>({});
-  const [peopleChoice, setPeopleChoice] = useState("");
+
+  const twitchName =
+    user?.user_metadata?.preferred_username ||
+    user?.user_metadata?.user_name ||
+    user?.user_metadata?.name ||
+    user?.user_metadata?.full_name ||
+    "Twitch User";
 
   return (
     <main className="min-h-screen bg-[#080d1a] text-white">
@@ -443,30 +422,7 @@ export default function Home() {
             5VT <span className="text-amber-300">AWARDS</span>
           </a>
 
-          
-          
-{user ? (
-  <div className="flex items-center gap-3">
-    <span className="text-sm text-amber-300">
-      {user.user_metadata?.preferred_username ||
-        user.user_metadata?.name ||
-        "Twitch User"}
-    </span>
-    <button
-      onClick={logout}
-      className="rounded-lg border border-white/20 px-4 py-2 text-sm"
-    >
-      Logout
-    </button>
-  </div>
-) : (
-  <button
-    onClick={loginWithTwitch}
-    className="rounded-lg bg-purple-600 px-5 py-2 font-bold text-white hover:bg-purple-500"
-  >
-    Login with Twitch
-  </button>
-)}<nav className="flex flex-wrap gap-4 text-xs font-semibold sm:text-sm">
+          <nav className="flex flex-wrap gap-4 text-xs font-semibold sm:text-sm">
             {categories.map((category) => (
               <a
                 key={category.id}
@@ -477,7 +433,46 @@ export default function Home() {
               </a>
             ))}
           </nav>
+
+          <div className="flex items-center gap-3">
+            {authLoading ? (
+              <span className="text-sm text-slate-400">
+                Checking login...
+              </span>
+            ) : user ? (
+              <>
+                <span className="max-w-40 truncate text-sm font-semibold text-amber-300">
+                  {twitchName}
+                </span>
+
+                <button
+                  type="button"
+                  onClick={logout}
+                  className="rounded-lg border border-white/20 px-4 py-2 text-sm hover:border-amber-300"
+                >
+                  Logout
+                </button>
+              </>
+            ) : (
+              <button
+                type="button"
+                onClick={loginWithTwitch}
+                className="rounded-lg bg-purple-600 px-5 py-2 font-bold text-white transition hover:bg-purple-500"
+              >
+                Login with Twitch
+              </button>
+            )}
+          </div>
         </div>
+
+        {authError && (
+          <p
+            role="alert"
+            className="mx-auto mt-3 max-w-7xl text-sm text-red-300"
+          >
+            Login error: {authError}
+          </p>
+        )}
       </header>
 
       <section
@@ -498,6 +493,18 @@ export default function Home() {
           Celebrating the artists, creators, supporters, and unforgettable
           moments shaping the 5VT community.
         </p>
+
+        <div className="relative mt-6">
+          {user ? (
+            <p className="text-sm font-semibold text-amber-300">
+              Signed in with Twitch as {twitchName}
+            </p>
+          ) : (
+            <p className="text-sm text-slate-400">
+              Sign in with Twitch to get ready for voting.
+            </p>
+          )}
+        </div>
 
         <a
           href="#creative-arts"
@@ -557,7 +564,9 @@ export default function Home() {
                     <input
                       id="peoples-choice-name"
                       value={peopleChoice}
-                      onChange={(e) => setPeopleChoice(e.target.value)}
+                      onChange={(e) =>
+                        setPeopleChoice(e.target.value)
+                      }
                       maxLength={80}
                       placeholder="Enter their Twitch name or community name"
                       className="w-full rounded-lg border border-white/20 bg-[#111b2c] px-4 py-3 text-white outline-none focus:border-amber-300"
@@ -576,55 +585,59 @@ export default function Home() {
                 ) : (
                   <>
                     <div className="grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-5">
-                      {award.nominees.map((nominee, nomineeIndex) => {
-                        const selected =
-                          choices[award.id] === String(nomineeIndex);
+                      {award.nominees.map(
+                        (nominee, nomineeIndex) => {
+                          const selected =
+                            choices[award.id] ===
+                            String(nomineeIndex);
 
-                        return (
-                          <button
-                            key={`${award.id}-${nomineeIndex}`}
-                            type="button"
-                            aria-pressed={selected}
-                            onClick={() =>
-                              setChoices((previous) => ({
-                                ...previous,
-                                [award.id]: String(nomineeIndex),
-                              }))
-                            }
-                            className={`overflow-hidden rounded-xl border text-left transition hover:-translate-y-1 ${
-                              selected
-                                ? "border-amber-300 bg-amber-300/15 ring-2 ring-amber-300"
-                                : "border-white/15 bg-white/5 hover:border-amber-300/70"
-                            }`}
-                          >
-                            <NomineePhoto nominee={nominee} />
+                          return (
+                            <button
+                              key={`${award.id}-${nomineeIndex}`}
+                              type="button"
+                              aria-pressed={selected}
+                              onClick={() =>
+                                setChoices((previous) => ({
+                                  ...previous,
+                                  [award.id]:
+                                    String(nomineeIndex),
+                                }))
+                              }
+                              className={`overflow-hidden rounded-xl border text-left transition hover:-translate-y-1 ${
+                                selected
+                                  ? "border-amber-300 bg-amber-300/15 ring-2 ring-amber-300"
+                                  : "border-white/15 bg-white/5 hover:border-amber-300/70"
+                              }`}
+                            >
+                              <NomineePhoto nominee={nominee} />
 
-                            <div className="flex min-h-28 flex-col items-center justify-center gap-1 p-3 text-center">
-                              <span className="break-words text-sm font-bold sm:text-base">
-                                {nominee.name}
-                              </span>
-
-                              {nominee.detail && (
-                                <span className="text-xs text-slate-300">
-                                  {nominee.detail}
+                              <div className="flex min-h-28 flex-col items-center justify-center gap-1 p-3 text-center">
+                                <span className="break-words text-sm font-bold sm:text-base">
+                                  {nominee.name}
                                 </span>
-                              )}
 
-                              <span
-                                className={`mt-2 text-xs font-semibold ${
-                                  selected
-                                    ? "text-amber-300"
-                                    : "text-slate-400"
-                                }`}
-                              >
-                                {selected
-                                  ? "✓ Selected"
-                                  : "Select nominee"}
-                              </span>
-                            </div>
-                          </button>
-                        );
-                      })}
+                                {nominee.detail && (
+                                  <span className="text-xs text-slate-300">
+                                    {nominee.detail}
+                                  </span>
+                                )}
+
+                                <span
+                                  className={`mt-2 text-xs font-semibold ${
+                                    selected
+                                      ? "text-amber-300"
+                                      : "text-slate-400"
+                                  }`}
+                                >
+                                  {selected
+                                    ? "✓ Selected"
+                                    : "Select nominee"}
+                                </span>
+                              </div>
+                            </button>
+                          );
+                        }
+                      )}
                     </div>
 
                     <div className="mt-8 rounded-xl border border-amber-300/20 bg-white/5 p-5 text-center">
@@ -651,7 +664,7 @@ export default function Home() {
       </div>
 
       <footer className="border-t border-white/10 px-6 py-8 text-center text-xs text-slate-400">
-        © 2026 5IVE STUDIOS AWARD SHOW · ALL AWARDS · PREVIEW MODE
+        © 2026 5IVE STUDIOS · ALL AWARDS · PREVIEW MODE
       </footer>
     </main>
   );
