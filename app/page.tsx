@@ -443,7 +443,30 @@ export default function Home() {
             5VT <span className="text-amber-300">AWARDS</span>
           </a>
 
-          <nav className="flex flex-wrap gap-4 text-xs font-semibold sm:text-sm">
+          
+          
+{user ? (
+  <div className="flex items-center gap-3">
+    <span className="text-sm text-amber-300">
+      {user.user_metadata?.preferred_username ||
+        user.user_metadata?.name ||
+        "Twitch User"}
+    </span>
+    <button
+      onClick={logout}
+      className="rounded-lg border border-white/20 px-4 py-2 text-sm"
+    >
+      Logout
+    </button>
+  </div>
+) : (
+  <button
+    onClick={loginWithTwitch}
+    className="rounded-lg bg-purple-600 px-5 py-2 font-bold text-white hover:bg-purple-500"
+  >
+    Login with Twitch
+  </button>
+)}<nav className="flex flex-wrap gap-4 text-xs font-semibold sm:text-sm">
             {categories.map((category) => (
               <a
                 key={category.id}
