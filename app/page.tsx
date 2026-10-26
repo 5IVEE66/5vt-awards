@@ -1,7 +1,9 @@
 
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { supabase } from "../lib/supabase";
+import type { User } from "@supabase/supabase-js";
 
 type Nominee = {
   name: string;
