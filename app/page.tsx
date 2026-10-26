@@ -399,7 +399,35 @@ function NomineePhoto({ nominee }: { nominee: Nominee }) {
     </div>
   );
 }
+const [user, setUser] = useState<User | null>(null);
 
+  useEffect(() => {
+    supabase.auth.getUser().then(({ data }) => {
+      setUser(data.user);
+    });
+
+    const { data: listener } =
+      supabase.auth.onAuthStateChange((_event, session) => {
+        setUser(session?.user ?? null);
+      });
+
+    return () => listener.subscription.unsubscribe();
+  }, []);
+
+  async function loginWithTwitch() {
+    const { error } = await supabase.auth.signInWithOAuth({
+      provider: "twitch",
+      options: {
+        redirectTo: "https://5vt-awards.vercel.app/",
+      },
+    });
+
+    if (error) alert(error.message);
+  }
+
+  async function logout() {
+    await supabase.auth.signOut();
+  }
 export default function Home() {
   const [choices, setChoices] = useState<Record<string, string>>({});
   const [peopleChoice, setPeopleChoice] = useState("");
